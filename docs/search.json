@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Welcome to My Data Analytics Lab",
     "section": "",
-    "text": "Hello! My name is Emir GOK.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nprint(“This is our template.”)\n\n\n\n Back to top"
+    "text": "Hello! My name is Emir GOK.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nprint(“This is our template.”)\n\n\n\nGonna Be Alright\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "assignments/assignment-2.html",
@@ -25,7 +25,7 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing."
+    "text": "B.S., Industrial Engineering, Hacettepe University, Turkey, 2020 - ongoing."
   },
   {
     "objectID": "about.html#employements",
@@ -39,7 +39,7 @@
     "href": "about.html#internships",
     "title": "About Me",
     "section": "Internships",
-    "text": "Internships\n\nFirm aaa, position xx, year xxx\nFirm bbb, position yyy, year yyy"
+    "text": "Internships\n\nHyundai ASSAN, position = Administration Affairs Intern, year = 2024\nESPOM, position = Business Development Intern, year 2022\n2ThousandFifty, position = Sustainability Services Manager, year 2024"
   },
   {
     "objectID": "assignments/assignment-1.html",
@@ -90,7 +90,7 @@
     "href": "assignments/assignment-1.html#a-brief-summary-about-cem-vardar",
     "title": "Assignment 1",
     "section": "(a) Brief Summary about Cem Vardar",
-    "text": "(a) Brief Summary about Cem Vardar\nCem Vardar, an industrial engineer with a bachelor’s and doctorate from Arizona State University, began his career at Intel and later worked on data science at Carvana. His work focuses on using data-driven insights to optimize complex systems and improve logistics, profitability, and sales. Funnel analysis helps optimize the customer experience by tracking potential customers’ journey to the purchase stage, while net lift modeling aims to measure the impact of marketing campaigns and increase reach to the target audience. Vardar emphasizes the importance of analytical skills, the value of internships, and the impact of artificial intelligence and entrepreneurship on industrial engineering.\nQuestion 1: How does funnel analysis benefit businesses, and why is it important?\nAnswer: Funnel analysis tracks the journey of potential customers from initial contact to final purchase. It helps businesses understand and optimize each stage of the customer experience to improve conversion rates.\nWhich of the following is not a field where operations research and data science are commonly applied together?\n\nLogistics Planning\nInventory Management\nProduction Planning\nCustomer Relationship Management\n\nAnswer: “Option D.” Customer Relationship Management focuses on studying customer interactions, satisfaction, and loyalty. While operations research aims at optimizing systems, analyzing data, and improving decision-making processes, CRM is more centered around human relations and communication strategies, rather than mathematical modeling or operational efficiency. Therefore, it does not align directly with the goals of operations research and data science.",
+    "text": "(a) Brief Summary about Cem Vardar\nCem Vardar, an industrial engineer with a bachelor’s and doctorate from Arizona State University, began his career at Intel and later worked on data science at Carvana. His work focuses on using data-driven insights to optimize complex systems and improve logistics, profitability, and sales. Funnel analysis helps optimize the customer experience by tracking potential customers’ journey to the purchase stage, while net lift modeling aims to measure the impact of marketing campaigns and increase reach to the target audience. Vardar emphasizes the importance of analytical skills, the value of internships, and the impact of artificial intelligence and entrepreneurship on industrial engineering.\nQuestion 1: How does funnel analysis benefit businesses, and why is it important?\nAnswer: Funnel analysis tracks the journey of potential customers from initial contact to final purchase. It helps businesses understand and optimize each stage of the customer experience to improve conversion rates.\nQuestion 2: Which of the following is not a field where operations research and data science are commonly applied together?\n\nLogistics Planning\nInventory Management\nProduction Planning\nCustomer Relationship Management\n\nAnswer: “Option D.” Customer Relationship Management focuses on studying customer interactions, satisfaction, and loyalty. While operations research aims at optimizing systems, analyzing data, and improving decision-making processes, CRM is more centered around human relations and communication strategies, rather than mathematical modeling or operational efficiency. Therefore, it does not align directly with the goals of operations research and data science.",
     "crumbs": [
       "Assignment 1"
     ]

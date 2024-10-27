@@ -12,7 +12,7 @@ Question 1: How does funnel analysis benefit businesses, and why is it important
   
 Answer: Funnel analysis tracks the journey of potential customers from initial contact to final purchase. It helps businesses understand and optimize each stage of the customer experience to improve conversion rates.
 
-Which of the following is not a field where operations research and data science are commonly applied together?
+Question 2: Which of the following is not a field where operations research and data science are commonly applied together?
 
 a) Logistics Planning
 
