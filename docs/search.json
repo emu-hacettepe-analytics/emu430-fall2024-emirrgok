@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to My Analytics Lab",
+    "title": "Welcome to My Data Analytics Lab",
     "section": "",
-    "text": "Hello! My name is xxx xxxx.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nThis is our template.\n\n\n\n Back to top"
+    "text": "Hello! My name is Emir GOK.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nprint(“This is our template.”)\n\n\n\n Back to top"
   },
   {
     "objectID": "assignments/assignment-2.html",
@@ -46,7 +46,10 @@
     "href": "assignments/assignment-1.html",
     "title": "Assignment 1",
     "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\nMy first assignment has two parts."
+    "text": "My first assignment has two parts.",
+    "crumbs": [
+      "Assignment 1"
+    ]
   },
   {
     "objectID": "assignments.html",
@@ -61,5 +64,35 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "assignments/assignment-1.html#b",
+    "href": "assignments/assignment-1.html#b",
+    "title": "Assignment 1",
+    "section": "(b)",
+    "text": "(b)\nI explained it step by step using code chunks.\n\n# I started by loading the dslabs package\nlibrary(dslabs)\n\n# I Imported the 'polls_us_election_2016' data set from dslabs.\ndata(\"polls_us_election_2016\")\n\n# I displayed first 10 rows of the dataset \nhead(polls_us_election_2016, 10)\n\n        state  startdate    enddate\n1        U.S. 2016-11-03 2016-11-06\n2        U.S. 2016-11-01 2016-11-07\n3        U.S. 2016-11-02 2016-11-06\n4        U.S. 2016-11-04 2016-11-07\n5        U.S. 2016-11-03 2016-11-06\n6        U.S. 2016-11-03 2016-11-06\n7        U.S. 2016-11-02 2016-11-06\n8        U.S. 2016-11-03 2016-11-05\n9  New Mexico 2016-11-06 2016-11-06\n10       U.S. 2016-11-04 2016-11-07\n                                                     pollster grade samplesize\n1                                    ABC News/Washington Post    A+       2220\n2                                     Google Consumer Surveys     B      26574\n3                                                       Ipsos    A-       2195\n4                                                      YouGov     B       3677\n5                                            Gravis Marketing    B-      16639\n6  Fox News/Anderson Robbins Research/Shaw & Company Research     A       1295\n7                                     CBS News/New York Times    A-       1426\n8                                NBC News/Wall Street Journal    A-       1282\n9                                                    Zia Poll  &lt;NA&gt;       8439\n10                                                   IBD/TIPP    A-       1107\n   population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin\n1          lv           47.00         43.00            4.00               NA\n2          lv           38.03         35.69            5.46               NA\n3          lv           42.00         39.00            6.00               NA\n4          lv           45.00         41.00            5.00               NA\n5          rv           47.00         43.00            3.00               NA\n6          lv           48.00         44.00            3.00               NA\n7          lv           45.00         41.00            5.00               NA\n8          lv           44.00         40.00            6.00               NA\n9          lv           46.00         44.00            6.00               NA\n10         lv           41.20         42.70            7.10               NA\n   adjpoll_clinton adjpoll_trump adjpoll_johnson adjpoll_mcmullin\n1         45.20163      41.72430        4.626221               NA\n2         43.34557      41.21439        5.175792               NA\n3         42.02638      38.81620        6.844734               NA\n4         45.65676      40.92004        6.069454               NA\n5         46.84089      42.33184        3.726098               NA\n6         49.02208      43.95631        3.057876               NA\n7         45.11649      40.92722        4.341786               NA\n8         43.58576      40.77325        5.365788               NA\n9         44.82594      41.59978        7.870127               NA\n10        42.92745      42.23545        6.316175               NA\n\n# Calculate NA values and show \ntotal_number_of_none_available &lt;- sum(is.na(polls_us_election_2016))\n\nprint(total_number_of_none_available)\n\n[1] 11604\n\n\n\nbirth_year &lt;- 2001\nfirst_name &lt;- \"Emir\"\n\n\nreplace_na_general &lt;- function(data, birth_year, first_name) {\n  \n  \n  replace_na_in_factor &lt;- function(factor_col, replacement) {\n    levels(factor_col) &lt;- c(levels(factor_col), replacement) \n    factor_col[is.na(factor_col)] &lt;- replacement             \n    return(factor_col)\n  }\n  \n  \n  for (col in names(data)) {\n    if (is.numeric(data[[col]])) {\n      \n      data[[col]][is.na(data[[col]])] &lt;- birth_year\n    } else if (is.character(data[[col]])) {\n      \n      data[[col]][is.na(data[[col]])] &lt;- first_name\n    } else if (is.factor(data[[col]])) {\n      \n      data[[col]] &lt;- replace_na_in_factor(data[[col]], first_name)\n    }\n  }\n  \n  return(data)\n}\n\nmodified_data &lt;- replace_na_general(polls_us_election_2016, birth_year, first_name)\nhead(modified_data,10)\n\n        state  startdate    enddate\n1        U.S. 2016-11-03 2016-11-06\n2        U.S. 2016-11-01 2016-11-07\n3        U.S. 2016-11-02 2016-11-06\n4        U.S. 2016-11-04 2016-11-07\n5        U.S. 2016-11-03 2016-11-06\n6        U.S. 2016-11-03 2016-11-06\n7        U.S. 2016-11-02 2016-11-06\n8        U.S. 2016-11-03 2016-11-05\n9  New Mexico 2016-11-06 2016-11-06\n10       U.S. 2016-11-04 2016-11-07\n                                                     pollster grade samplesize\n1                                    ABC News/Washington Post    A+       2220\n2                                     Google Consumer Surveys     B      26574\n3                                                       Ipsos    A-       2195\n4                                                      YouGov     B       3677\n5                                            Gravis Marketing    B-      16639\n6  Fox News/Anderson Robbins Research/Shaw & Company Research     A       1295\n7                                     CBS News/New York Times    A-       1426\n8                                NBC News/Wall Street Journal    A-       1282\n9                                                    Zia Poll  Emir       8439\n10                                                   IBD/TIPP    A-       1107\n   population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin\n1          lv           47.00         43.00            4.00             2001\n2          lv           38.03         35.69            5.46             2001\n3          lv           42.00         39.00            6.00             2001\n4          lv           45.00         41.00            5.00             2001\n5          rv           47.00         43.00            3.00             2001\n6          lv           48.00         44.00            3.00             2001\n7          lv           45.00         41.00            5.00             2001\n8          lv           44.00         40.00            6.00             2001\n9          lv           46.00         44.00            6.00             2001\n10         lv           41.20         42.70            7.10             2001\n   adjpoll_clinton adjpoll_trump adjpoll_johnson adjpoll_mcmullin\n1         45.20163      41.72430        4.626221             2001\n2         43.34557      41.21439        5.175792             2001\n3         42.02638      38.81620        6.844734             2001\n4         45.65676      40.92004        6.069454             2001\n5         46.84089      42.33184        3.726098             2001\n6         49.02208      43.95631        3.057876             2001\n7         45.11649      40.92722        4.341786             2001\n8         43.58576      40.77325        5.365788             2001\n9         44.82594      41.59978        7.870127             2001\n10        42.92745      42.23545        6.316175             2001",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a",
+    "href": "assignments/assignment-1.html#a",
+    "title": "Assignment 1",
+    "section": "(a)",
+    "text": "(a)",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a-brief-summary-about-cem-vardar",
+    "href": "assignments/assignment-1.html#a-brief-summary-about-cem-vardar",
+    "title": "Assignment 1",
+    "section": "(a) Brief Summary about Cem Vardar",
+    "text": "(a) Brief Summary about Cem Vardar\nCem Vardar, an industrial engineer with a bachelor’s and doctorate from Arizona State University, began his career at Intel and later worked on data science at Carvana. His work focuses on using data-driven insights to optimize complex systems and improve logistics, profitability, and sales. Funnel analysis helps optimize the customer experience by tracking potential customers’ journey to the purchase stage, while net lift modeling aims to measure the impact of marketing campaigns and increase reach to the target audience. Vardar emphasizes the importance of analytical skills, the value of internships, and the impact of artificial intelligence and entrepreneurship on industrial engineering.\nQuestion 1: How does funnel analysis benefit businesses, and why is it important?\nAnswer: Funnel analysis tracks the journey of potential customers from initial contact to final purchase. It helps businesses understand and optimize each stage of the customer experience to improve conversion rates.\nWhich of the following is not a field where operations research and data science are commonly applied together?\n\nLogistics Planning\nInventory Management\nProduction Planning\nCustomer Relationship Management\n\nAnswer: “Option D.” Customer Relationship Management focuses on studying customer interactions, satisfaction, and loyalty. While operations research aims at optimizing systems, analyzing data, and improving decision-making processes, CRM is more centered around human relations and communication strategies, rather than mathematical modeling or operational efficiency. Therefore, it does not align directly with the goals of operations research and data science.",
+    "crumbs": [
+      "Assignment 1"
+    ]
   }
 ]

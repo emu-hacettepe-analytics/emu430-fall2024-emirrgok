@@ -1,12 +1,15 @@
 ---
-title: "Welcome to My World"
+title: "Welcome to My Data Analytics Lab"
 sidebar: false 
 ---
 
-Hello! My name is xxx xxxx.
+Hello! My name is Emir GOK.
 
 This is my personal webpage.
 
 Please stay tuned to follow my works on data analytics, blog posts, and more.
 
-This is our template.
+print("This is our template.")
+
+
+

@@ -28,3 +28,7 @@ sidebar: false
 R, Quarto, Git, Python
 
 # Hobbies
+
+# CV
+
+[Emir G??k CV](cv.pdf){.download-button}

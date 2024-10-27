@@ -2,14 +2,79 @@
 title: "Assignment 1"
 ---
 
-# Assignment 1
-
-```{r}
-1 + 1
-```
-
 My first assignment has two parts.
 
-## (a)
+## (a) Brief Summary about Cem Vardar 
+
+  Cem Vardar, an industrial engineer with a bachelor's and doctorate from Arizona State University, began his career at Intel and later worked on data science at Carvana. His work focuses on using data-driven insights to optimize complex systems and improve logistics, profitability, and sales. Funnel analysis helps optimize the customer experience by tracking potential customers' journey to the purchase stage, while net lift modeling aims to measure the impact of marketing campaigns and increase reach to the target audience. Vardar emphasizes the importance of analytical skills, the value of internships, and the impact of artificial intelligence and entrepreneurship on industrial engineering.
+  
+Question 1: How does funnel analysis benefit businesses, and why is it important?
+  
+Answer: Funnel analysis tracks the journey of potential customers from initial contact to final purchase. It helps businesses understand and optimize each stage of the customer experience to improve conversion rates.
+
+Which of the following is not a field where operations research and data science are commonly applied together?
+
+a) Logistics Planning
+
+b) Inventory Management
+
+c) Production Planning
+
+d) Customer Relationship Management
+
+Answer: "Option D." Customer Relationship Management focuses on studying customer interactions, satisfaction, and loyalty. While operations research aims at optimizing systems, analyzing data, and improving decision-making processes, CRM is more centered around human relations and communication strategies, rather than mathematical modeling or operational efficiency. Therefore, it does not align directly with the goals of operations research and data science.
 
 ## (b)
+
+I explained it step by step using code chunks.
+
+```{r}
+# I started by loading the dslabs package
+library(dslabs)
+
+# I Imported the 'polls_us_election_2016' data set from dslabs.
+data("polls_us_election_2016")
+
+# I displayed first 10 rows of the dataset 
+head(polls_us_election_2016, 10)
+
+# Calculate NA values and show 
+total_number_of_none_available <- sum(is.na(polls_us_election_2016))
+
+print(total_number_of_none_available)
+```
+```{r}
+birth_year <- 2001
+first_name <- "Emir"
+
+
+replace_na_general <- function(data, birth_year, first_name) {
+  
+  
+  replace_na_in_factor <- function(factor_col, replacement) {
+    levels(factor_col) <- c(levels(factor_col), replacement) 
+    factor_col[is.na(factor_col)] <- replacement             
+    return(factor_col)
+  }
+  
+  
+  for (col in names(data)) {
+    if (is.numeric(data[[col]])) {
+      
+      data[[col]][is.na(data[[col]])] <- birth_year
+    } else if (is.character(data[[col]])) {
+      
+      data[[col]][is.na(data[[col]])] <- first_name
+    } else if (is.factor(data[[col]])) {
+      
+      data[[col]] <- replace_na_in_factor(data[[col]], first_name)
+    }
+  }
+  
+  return(data)
+}
+
+modified_data <- replace_na_general(polls_us_election_2016, birth_year, first_name)
+head(modified_data,10)
+```
+
